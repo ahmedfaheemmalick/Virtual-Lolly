@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from "@apollo/client"
-import { graphql } from "gatsby";
+import gql from "graphql-tag";
 
 const GET_LOLLIES_BY_PATH = graphql`
     query MyQuery($lollyPath: String!){
