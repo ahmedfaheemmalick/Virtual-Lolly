@@ -19,7 +19,7 @@ const typeDefs = gql`
     colorTop: String!
     colorMiddle: String!
     colorBottom: String!
-    lollyPath: String
+    lollyPath: ID!
   }
 `
 
@@ -88,3 +88,4 @@ const server = new ApolloServer({
 })
 
 exports.handler = server.createHandler()
+
