@@ -61,10 +61,8 @@ const resolvers = {
 
   Mutation: {
     createLolly: async (_, args) => {
-      console.log('args', args)
       try {
         args.lollyPath = shortId.generate()
-
 
         const result = await client.query(
           query.Create(query.Collection("lollies"), {
@@ -72,7 +70,6 @@ const resolvers = {
           })
         );
 
-        console.log(result.data)
         return result.data
       } catch (error) {
         return error;

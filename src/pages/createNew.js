@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from "@apollo/client"
-// import { navigate } from 'gatsby'
+import { navigate } from 'gatsby'
 import gql from "graphql-tag"
 import Header from "../component/Header/Header"
 import Lolly from "../component/Lolly/Lolly"
@@ -9,7 +9,7 @@ import * as styles from "./createNew.module.css"
 const CREATE_LOLLY = gql`
   mutation createLolly($recipient: String!, $message: String!, $sender: String!, $colorTop : String!, $colorMiddle: String!, $colorBottom: String!) {
     createLolly(recipient: $recipient, message: $message, sender: $sender, colorTop : $colorTop, colorMiddle: $colorMiddle, colorBottom: $colorBottom) {
-        message
+        lollyPath
     }
   }
 `;
@@ -26,10 +26,9 @@ const CreateNew = () => {
 
     const [createLolly] = useMutation(CREATE_LOLLY)
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const result = await createLolly({
+        await createLolly({
             variables: {
                 recipient,
                 message,
@@ -38,10 +37,10 @@ const CreateNew = () => {
                 colorMiddle,
                 colorBottom
             }
-        })
-
-        console.log(result)
-            // .then((abc) => console.log('abc', abc))
+        }).then((result) => navigate(`/lolly/${result.data.createLolly.lollyPath}`))
+        setRecipient("")
+        setMessage("")
+        setSender("")
     }
 
     return (

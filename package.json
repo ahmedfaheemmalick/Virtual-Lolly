@@ -20,6 +20,7 @@
     "apollo-server-lambda": "^2.25.2",
     "faunadb": "^3.0.1",
     "gatsby": "^2.24.34",
+    "gatsby-source-graphql": "^3.14.0",
     "graphql": "^14.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
