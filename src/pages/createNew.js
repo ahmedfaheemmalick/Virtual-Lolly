@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from "@apollo/client"
-import { navigate } from 'gatsby'
+// import { navigate } from 'gatsby'
 import gql from "graphql-tag"
 import Header from "../component/Header/Header"
 import Lolly from "../component/Lolly/Lolly"
