@@ -28,7 +28,7 @@ const CreateNew = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await createLolly({
+        createLolly({
             variables: {
                 recipient,
                 message,
@@ -37,7 +37,10 @@ const CreateNew = () => {
                 colorMiddle,
                 colorBottom
             }
-        }).then((result) => navigate(`/lolly/${result.data.createLolly.lollyPath}`))
+        }).then(result => setTimeout(async () => {
+            await navigate(`/lolly/${result.data.createLolly.lollyPath}`)
+        }, 3000))
+
         setRecipient("")
         setMessage("")
         setSender("")

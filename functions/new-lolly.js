@@ -52,7 +52,7 @@ const resolvers = {
           )
         );
 
-        return result
+        return result.data
       } catch (error) {
         return error
       }
