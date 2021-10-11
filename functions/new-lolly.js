@@ -71,10 +71,10 @@ const resolvers = {
           })
         );
 
-        axios
-          .post("https://api.netlify.com/build_hooks/616427c03311c3ee1e34052c")
-          .then((response) => console.log(response))
-          .catch((error) => console.error(error));
+        // axios
+        //   .post("https://api.netlify.com/build_hooks/616427c03311c3ee1e34052c")
+        //   .then((response) => console.log(response))
+        //   .catch((error) => console.error(error));
 
         return result.data
       } catch (error) {
