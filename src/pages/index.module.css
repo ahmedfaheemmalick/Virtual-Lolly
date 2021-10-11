@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: #21212b;
+}
+
+.lollies {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.lolly {
+  margin: 0 10px;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.btn button {
+  text-align: center;
+  color: #fa73d9;
+  padding: 10px 30px;
+  text-decoration: none;
+  border: 2px solid #fa73d9;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  box-shadow: rgb(250, 115, 127) 0 0 6px 0;
+  background: transparent;
+  cursor: pointer;
+}
