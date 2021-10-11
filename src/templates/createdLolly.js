@@ -2,7 +2,7 @@ import React from 'react'
 import { useQuery } from "@apollo/client"
 import gql from "graphql-tag";
 
-const GET_LOLLIES_BY_PATH = graphql`
+const GET_LOLLIES_BY_PATH = gql`
     query MyQuery($lollyPath: String!){
         getLollies {
             lollyByPath(lollyPath: $lollyPath){
