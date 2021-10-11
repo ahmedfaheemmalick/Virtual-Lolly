@@ -37,7 +37,7 @@ const CreateNew = () => {
                 colorMiddle,
                 colorBottom
             }
-        }).then(result => setTimeout(() => navigate(`/lolly/${result.data.createLolly.lollyPath}`), 5000))
+        }).then(result => setTimeout(() => navigate(`/lolly/${result.data.createLolly.lollyPath}`), 10000))
 
         setRecipient("")
         setMessage("")
