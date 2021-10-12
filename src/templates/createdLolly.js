@@ -4,15 +4,13 @@ import gql from "graphql-tag";
 
 const GET_LOLLIES_BY_PATH = gql`
     query MyQuery($lollyPath: String!){
-        getLollies {
-            lollyByPath(lollyPath: $lollyPath){
-                recipient
-                message
-                sender
-                colorTop
-                colorMiddle
-                colorBottom
-            }
+        lollyByPath(lollyPath: $lollyPath){
+            recipient
+            message
+            sender
+            colorTop
+            colorMiddle
+            colorBottom
         }
     }
 `
