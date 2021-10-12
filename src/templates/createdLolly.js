@@ -27,6 +27,7 @@ const CreatedLolly = ({ pageContext: { lollyPath } }) => {
 
     data && console.log(data)
     error && console.log(error)
+    loading && console.log(loading)
 
     return (
         <div>
