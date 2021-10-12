@@ -1,4 +1,4 @@
 [build]
-    command = "gatsby build"
+    command = "sudo yarn build && cd functions/new-lolly && sudo yarn"
     publish = "public"
     functions = "functions/"
