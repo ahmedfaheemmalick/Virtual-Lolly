@@ -15,7 +15,7 @@ exports.createPages = async ({ graphql, actions }) => {
             path: `/lolly/${lollyPath}`,
             component: require.resolve('./src/templates/createdLolly.js'),
             context: {
-                lollyPath: lollyPath
+                lollyPath
             },
         });
     });

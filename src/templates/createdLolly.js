@@ -13,7 +13,7 @@ const GET_LOLLIES_BY_PATH = gql`
             colorBottom
         }
     }
-`
+`;
 
 const CreatedLolly = ({ pageContext: { lollyPath } }) => {
 
