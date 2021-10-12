@@ -52,7 +52,7 @@ const resolvers = {
             query.Match(query.Index('lolly_by_path'), lollyPath)
           )
         );
-
+                
         return result.data
       } catch (error) {
         return error
