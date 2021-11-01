@@ -28,7 +28,20 @@ const CreateNew = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        createLolly({
+        // createLolly({
+        //     variables: {
+        //         recipient,
+        //         message,
+        //         sender,
+        //         colorTop,
+        //         colorMiddle,
+        //         colorBottom
+        //     }
+        // })
+        // .then(result => setTimeout(() => navigate(`/lolly/${result.data.createLolly.lollyPath}`), 10000))
+        // .catch(err => console.log('error', err))
+
+        const result = await createLolly({
             variables: {
                 recipient,
                 message,
@@ -36,8 +49,14 @@ const CreateNew = () => {
                 colorTop,
                 colorMiddle,
                 colorBottom
-            }
-        }).then(result => setTimeout(() => navigate(`/lolly/${result.data.createLolly.lollyPath}`), 10000))
+            },
+        });
+
+      console.log(result);
+
+      setTimeout(async () => {
+        await navigate(`/lolly/${result.data.createLolly.lollyPath}`);
+      }, 3000);
 
         setRecipient("")
         setMessage("")
